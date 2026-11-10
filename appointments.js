@@ -33,9 +33,13 @@ function searchDoctors() {
 searchForm.addEventListener("submit", function (event) {
     event.preventDefault();
     searchDoctors();
+    bookingMessage.textContent = "";
 });
 
-specialityInput.addEventListener("input", searchDoctors);
+specialityInput.addEventListener("input", function () {
+    searchDoctors();
+    bookingMessage.textContent = "";
+});
 
 // Demo booking interaction
 document.querySelectorAll(".book-button").forEach(function (button) {
@@ -43,6 +47,6 @@ document.querySelectorAll(".book-button").forEach(function (button) {
         const doctorName = button.dataset.doctor;
 
         bookingMessage.textContent =
-            `You selected ${doctorName}. Appointment booking will be available when the booking system is connected.`;
+            `Demo only: ${doctorName} is a fictional profile. No appointment was booked or saved.`;
     });
 });

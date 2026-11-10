@@ -8,11 +8,11 @@
 }
 
 :root {
-    --primary: #168477;
-    --primary-dark: #10685f;
+    --primary: #10685f;
+    --primary-dark: #0b514b;
     --background: #f0f7f6;
     --text: #243b3a;
-    --muted: #7b8c8a;
+    --muted: #536966;
     --border: #dce8e5;
     --white: #ffffff;
 }
@@ -26,7 +26,7 @@ body {
 
 /* Page layout */
 .login-container {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--nav-height));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,6 +58,14 @@ h1 {
     font-size: 14px;
     color: var(--muted);
     margin-bottom: 32px;
+}
+
+.demo-note {
+    margin: -16px 0 24px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 .signup-text a,
@@ -106,7 +114,7 @@ h1 {
 }
 
 .form-group input::placeholder {
-    color: #a5b2b0;
+    color: #536966;
 }
 
 .form-group input:hover {
@@ -148,8 +156,8 @@ h1 {
 
 .reset-btn {
     margin-top: 12px;
-    background: #f70b0b;
-    color: #f0f2f2;
+    background: #edf4f2;
+    color: #536966;
 }
 
 .reset-btn:hover {
@@ -200,7 +208,7 @@ h1 {
 /* Accessibility */
 button:focus-visible,
 a:focus-visible {
-    outline: 3px solid #8bc9bd;
+    outline: 3px solid #005a50;
     outline-offset: 3px;
 }
 
@@ -251,7 +259,7 @@ a:focus-visible {
 }
 
 .toggle-password:focus-visible {
-    outline: 2px solid var(--primary);
+    outline: 2px solid #005a50;
     outline-offset: 2px;
     border-radius: 4px;
 }

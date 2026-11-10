@@ -1,10 +1,10 @@
 :root {
-    --primary: #168477;
-    --primary-dark: #10685f;
+    --primary: #10685f;
+    --primary-dark: #0b514b;
     --blue: #2563eb;
     --blue-dark: #1d4ed8;
     --text: #243b3a;
-    --muted: #71817f;
+    --muted: #536966;
     --border: #dce8e5;
     --background: #f4faf8;
     --white: #ffffff;
@@ -265,7 +265,7 @@ body {
 
 .book-button:focus-visible,
 .search-input-wrapper button:focus-visible {
-    outline: 3px solid #93c5fd;
+    outline: 3px solid #005a50;
     outline-offset: 3px;
 }
 

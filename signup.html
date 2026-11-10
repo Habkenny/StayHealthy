@@ -6,9 +6,30 @@
     <meta name="description" content="Create your StayHealthy account.">
     <title>StayHealthy | Sign Up</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navigation.css">
     <script src="script.js" defer></script>
+    <script src="navigation.js" defer></script>
 </head>
 <body>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <img src="images/doctor-3.webp" alt="" width="42" height="42">
+                <span>StayHealthy</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="health-blog.html">Health Blog</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="signup.html" class="signup-link active" aria-current="page">Sign Up</a></li>
+                <li><a href="login.html" class="login-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="signup-container">
         <section class="signup-card" aria-labelledby="signup-title">
@@ -20,11 +41,13 @@
                 <a href="login.html">Login</a>
             </p>
 
-            <form id="signupForm" method="post" novalidate>
+            <p class="demo-note">This frontend demo validates the form only; it does not create or store accounts.</p>
+
+            <form id="signupForm" method="post">
 
                 <div class="form-group">
                     <label for="role">Role</label>
-                    <select id="role" name="role" required>
+                    <select id="role" name="role" aria-describedby="message" required>
                         <option value="">Select your role</option>
                         <option value="patient">Patient</option>
                         <option value="doctor">Doctor</option>
@@ -39,6 +62,7 @@
                         name="fullName"
                         placeholder="Enter your full name"
                         autocomplete="name"
+                        aria-describedby="message"
                         required
                     >
                 </div>
@@ -51,6 +75,7 @@
                         name="phone"
                         placeholder="Enter your phone number"
                         autocomplete="tel"
+                        aria-describedby="message"
                         required
                     >
                 </div>
@@ -63,6 +88,7 @@
                         name="email"
                         placeholder="Enter your email"
                         autocomplete="email"
+                        aria-describedby="message"
                         required
                     >
                 </div>
@@ -75,10 +101,11 @@
                         name="password"
                         placeholder="Create a password"
                         autocomplete="new-password"
+                        aria-describedby="passwordHelp message"
                         minlength="8"
                         required
                     >
-                    <small>Use at least 8 characters.</small>
+                    <small id="passwordHelp">Use at least 8 characters.</small>
                 </div>
 
                 <button type="submit" class="submit-btn">
@@ -90,7 +117,7 @@
                     Reset
                 </button>
 
-                <p id="message" role="status" aria-live="polite"></p>
+                <p id="message" role="status" aria-live="polite" aria-atomic="true"></p>
 
             </form>
         </section>

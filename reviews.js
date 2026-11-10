@@ -47,12 +47,9 @@ reviewForm.addEventListener("submit", function (event) {
     // Display rating and review in the table
     statusCell.textContent = `${"★".repeat(Number(rating))} - ${reviewText}`;
 
-    reviewMessage.textContent = "Thank you! Your review has been submitted.";
+    reviewMessage.textContent = "Thank you! Your demo review is shown on this page only and is not saved.";
 
-    // Hide form after a short delay
     reviewForm.reset();
-    reviewFormCard.hidden = true;
-    currentRow = null;
 });
 
 // Cancel review

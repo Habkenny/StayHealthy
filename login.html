@@ -7,16 +7,37 @@
 
     <meta
         name="description"
-        content="Login securely to your StayHealthy account."
+        content="StayHealthy frontend demo login form. No real account authentication is available."
     >
 
     <title>StayHealthy | Login</title>
 
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="navigation.css">
     <script src="login.js" defer></script>
+    <script src="navigation.js" defer></script>
 </head>
 
 <body>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <img src="images/doctor-3.webp" alt="" width="42" height="42">
+                <span>StayHealthy</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="health-blog.html">Health Blog</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="signup.html" class="signup-link">Sign Up</a></li>
+                <li><a href="login.html" class="login-link active" aria-current="page">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="login-container">
 
@@ -29,7 +50,9 @@
                 <a href="signup.html">Sign up here</a>
             </p>
 
-            <form id="loginForm" method="post" novalidate>
+            <p class="demo-note">This frontend demo does not authenticate or store accounts.</p>
+
+            <form id="loginForm" method="post">
 
                 <!-- Email Address -->
                 <div class="form-group">
@@ -42,6 +65,7 @@
                         name="email"
                         placeholder="Enter your email"
                         autocomplete="username"
+                        aria-describedby="message"
                         required
                     >
 
@@ -60,6 +84,7 @@
                             name="password"
                             placeholder="Enter your password"
                             autocomplete="current-password"
+                            aria-describedby="message"
                             required
                         >
 
@@ -99,6 +124,7 @@
                     id="message"
                     role="status"
                     aria-live="polite"
+                    aria-atomic="true"
                 ></p>
 
             </form>
