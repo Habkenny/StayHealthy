@@ -7,12 +7,12 @@
 }
 
 :root {
-    --primary: #168477;
+    --primary: #10685f;
     --primary-dark: #10685f;
     --blue: #2563eb;
     --blue-dark: #1d4ed8;
     --text: #243b3a;
-    --muted: #71817f;
+    --muted: #536966;
     --white: #ffffff;
 }
 
@@ -123,7 +123,7 @@ body {
 ===================== */
 
 .hero {
-    min-height: calc(100vh - 85px);
+    min-height: calc(100vh - var(--nav-height));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,7 +224,7 @@ body {
 /* Accessibility */
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid #8bc9bd;
+    outline: 3px solid #005a50;
     outline-offset: 4px;
 }
 
@@ -275,7 +275,7 @@ button:focus-visible {
     }
 
     .hero {
-        min-height: calc(100vh - 73px);
+        min-height: calc(100vh - var(--nav-height));
     }
 }
 

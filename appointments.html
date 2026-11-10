@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find a doctor and explore available healthcare professionals at StayHealthy.">
+    <meta name="description" content="Browse fictional sample doctor profiles in the StayHealthy frontend demo.">
     <title>StayHealthy | Appointments</title>
     <link rel="stylesheet" href="appointments.css">
+    <link rel="stylesheet" href="navigation.css">
     <script src="appointments.js" defer></script>
+    <script src="navigation.js" defer></script>
 </head>
 <body>
 
     <header class="site-header">
-        <nav class="navbar container" aria-label="Main navigation">
+        <nav class="navbar" aria-label="Main navigation">
             <a href="index.html" class="brand">
-                <img src="images/doctor.jpg" alt="StayHealthy logo">
+                <img src="images/doctor-3.webp" alt="" width="42" height="42">
                 <span>StayHealthy</span>
             </a>
 
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="appointments.html" class="active">Appointments</a></li>
+                <li><a href="appointments.html" class="active" aria-current="page">Appointments</a></li>
                 <li><a href="health-blog.html">Health Blog</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="signup-link">Sign Up</a></li>
+                <li><a href="login.html" class="login-link">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +39,7 @@
                 <h1>Find a doctor at ease</h1>
 
                 <div class="search-visual">
-                    <img src="images/doctor.jpg" alt="Healthcare professional">
+                    <img src="images/doctor-1.webp" alt="Sample healthcare professional" width="1600" height="871">
                 </div>
 
                 <form class="search-form" id="doctorSearchForm">
@@ -52,12 +56,12 @@
                     </div>
                 </form>
 
-                <p class="doctor-count" id="doctorCount">
+                <p class="doctor-count" id="doctorCount" role="status" aria-live="polite">
                     8 doctors available
                 </p>
 
                 <p class="search-description">
-                    Book appointments with minimum wait-time &amp; verified doctor details.
+                    Search fictional sample profiles. No appointments can currently be booked.
                 </p>
 
             </div>
@@ -66,114 +70,114 @@
         <section class="doctors-section container">
             <div class="section-heading">
                 <h2>Available Doctors</h2>
-                <p>Choose a doctor to get started with your healthcare journey.</p>
+                <p>These fictional profiles are for demonstration only. This page cannot book appointments or connect you with a doctor.</p>
             </div>
 
             <div class="doctor-grid" id="doctorGrid">
 
                 <article class="doctor-card" data-speciality="cardiology">
-                    <img src="images/doctor-1.jpg" alt="Dr. Sarah Johnson">
+                    <img src="images/doctor-1.webp" alt="Fictional profile for Dr. Sarah Johnson" width="1600" height="871" loading="lazy" decoding="async">
                     <div class="doctor-info">
                         <h3>Dr. Sarah Johnson</h3>
                         <p>Cardiologist</p>
                         <button class="book-button" type="button" data-doctor="Dr. Sarah Johnson">
                             Book appointment
-                            <span>No booking fee</span>
+                            <span>Demo only - not bookable</span>
                         </button>
                     </div>
                 </article>
 
                 <article class="doctor-card" data-speciality="dermatology">
-                    <img src="images/doctor-2.jpg" alt="Dr. Michael Brown">
+                    <img src="images/doctor-2.webp" alt="Fictional profile for Dr. Michael Brown" width="1200" height="1200" loading="lazy" decoding="async">
                     <div class="doctor-info">
                         <h3>Dr. Michael Brown</h3>
                         <p>Dermatologist</p>
                         <button class="book-button" type="button" data-doctor="Dr. Michael Brown">
                             Book appointment
-                            <span>No booking fee</span>
+                            <span>Demo only - not bookable</span>
                         </button>
                     </div>
                 </article>
 
                 <article class="doctor-card" data-speciality="paediatrics pediatrics">
-                    <img src="images/doctor-3.jpg" alt="Dr. Emily Wilson">
+                    <img src="images/doctor-3.webp" alt="Fictional profile for Dr. Emily Wilson" width="512" height="512" loading="lazy" decoding="async">
                     <div class="doctor-info">
                         <h3>Dr. Emily Wilson</h3>
                         <p>Paediatrician</p>
                         <button class="book-button" type="button" data-doctor="Dr. Emily Wilson">
                             Book appointment
-                            <span>No booking fee</span>
+                            <span>Demo only - not bookable</span>
                         </button>
                     </div>
                 </article>
 
                 <article class="doctor-card" data-speciality="neurology">
-                    <img src="images/doctor-4.jpg" alt="Dr. David Miller">
+                    <img src="images/doctor-4.webp" alt="Fictional profile for Dr. David Miller" width="1200" height="1200" loading="lazy" decoding="async">
                     <div class="doctor-info">
                         <h3>Dr. David Miller</h3>
                         <p>Neurologist</p>
                         <button class="book-button" type="button" data-doctor="Dr. David Miller">
                             Book appointment
-                            <span>No booking fee</span>
+                            <span>Demo only - not bookable</span>
                         </button>
                     </div>
                 </article>
 
                 <article class="doctor-card" data-speciality="general practice general practitioner">
-                    <img src="images/doctor-5.jpg" alt="Dr. Olivia Taylor">
+                    <img src="images/doctor-5.webp" alt="Fictional profile for Dr. Olivia Taylor" width="1600" height="1068" loading="lazy" decoding="async">
                     <div class="doctor-info">
                         <h3>Dr. Olivia Taylor</h3>
                         <p>General Practitioner</p>
                         <button class="book-button" type="button" data-doctor="Dr. Olivia Taylor">
                             Book appointment
-                            <span>No booking fee</span>
+                            <span>Demo only - not bookable</span>
                         </button>
                     </div>
                 </article>
 
                 <article class="doctor-card" data-speciality="orthopaedics orthopedics">
-                    <img src="images/doctor-6.jpg" alt="Dr. James Anderson">
+                    <img src="images/doctor-6.webp" alt="Fictional profile for Dr. James Anderson" width="1024" height="1024" loading="lazy" decoding="async">
                     <div class="doctor-info">
                         <h3>Dr. James Anderson</h3>
                         <p>Orthopaedic Surgeon</p>
                         <button class="book-button" type="button" data-doctor="Dr. James Anderson">
                             Book appointment
-                            <span>No booking fee</span>
+                            <span>Demo only - not bookable</span>
                         </button>
                     </div>
                 </article>
 
                 <article class="doctor-card" data-speciality="dentistry dentist">
-                    <img src="images/doctor-7.jpg" alt="Dr. Sophia Martinez">
+                    <img src="images/doctor-7.webp" alt="Fictional profile for Dr. Sophia Martinez" width="1600" height="1068" loading="lazy" decoding="async">
                     <div class="doctor-info">
                         <h3>Dr. Sophia Martinez</h3>
                         <p>Dentist</p>
                         <button class="book-button" type="button" data-doctor="Dr. Sophia Martinez">
                             Book appointment
-                            <span>No booking fee</span>
+                            <span>Demo only - not bookable</span>
                         </button>
                     </div>
                 </article>
 
                 <article class="doctor-card" data-speciality="ophthalmology eye specialist">
-                    <img src="images/doctor-8.jpg" alt="Dr. Daniel White">
+                    <img src="images/doctor-8.webp" alt="Fictional profile for Dr. Daniel White" width="1200" height="1200" loading="lazy" decoding="async">
                     <div class="doctor-info">
                         <h3>Dr. Daniel White</h3>
                         <p>Ophthalmologist</p>
                         <button class="book-button" type="button" data-doctor="Dr. Daniel White">
                             Book appointment
-                            <span>No booking fee</span>
+                            <span>Demo only - not bookable</span>
                         </button>
                     </div>
                 </article>
 
             </div>
 
-            <p class="no-results" id="noResults" hidden>
+            <p class="no-results" id="noResults" role="status" hidden>
                 No doctors found. Try searching for another speciality.
             </p>
 
-            <p class="booking-message" id="bookingMessage" role="status" aria-live="polite"></p>
+            <p class="booking-message" id="bookingMessage" role="status" aria-live="polite" aria-atomic="true"></p>
         </section>
     </main>
 

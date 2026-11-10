@@ -48,14 +48,14 @@ if (loginForm && passwordInput && togglePassword) {
             return;
         }
 
-        message.textContent = "This is a frontend demo. Connect a backend to authenticate real users.";
-        message.className = "success";
-
         loginForm.reset();
         passwordInput.type = "password";
         togglePassword.textContent = "👁️";
         togglePassword.setAttribute("aria-label", "Show password");
         togglePassword.setAttribute("aria-pressed", "false");
+
+        message.textContent = "Demo form validated. No account was authenticated.";
+        message.className = "success";
     });
 
     loginForm.addEventListener("reset", function () {

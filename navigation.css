@@ -1,0 +1,161 @@
+:root {
+    --primary: #10685f;
+    --primary-dark: #0b514b;
+    --text: #243b3a;
+    --muted: #536966;
+    --border: #dce8e5;
+    --white: #ffffff;
+    --nav-height: 76px;
+}
+
+.site-header {
+    position: relative;
+    z-index: 20;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    width: min(1120px, 92%);
+    min-height: var(--nav-height);
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active,
+.nav-links a[aria-current="page"] {
+    color: var(--primary);
+}
+
+.nav-links .signup-link {
+    padding: 9px 14px;
+    border: 1px solid var(--primary);
+    border-radius: 7px;
+    color: var(--primary);
+}
+
+.nav-links .login-link {
+    padding: 10px 17px;
+    border-radius: 7px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.nav-links .login-link:hover,
+.nav-links .login-link[aria-current="page"] {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    min-width: 44px;
+    min-height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--primary);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #005a50;
+    outline-offset: 3px;
+}
+
+@media (max-width: 850px) {
+    :root {
+        --nav-height: 70px;
+    }
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 18px 4%;
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 8px;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-links .signup-link,
+    .nav-links .login-link {
+        padding: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

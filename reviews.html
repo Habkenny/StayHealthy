@@ -7,23 +7,28 @@
     <meta name="description" content="Share your feedback about StayHealthy doctors.">
     <title>StayHealthy | Reviews</title>
     <link rel="stylesheet" href="reviews.css">
+    <link rel="stylesheet" href="navigation.css">
     <script src="reviews.js" defer></script>
+    <script src="navigation.js" defer></script>
 </head>
 <body>
 
-    <header class="navbar">
-        <a href="index.html" class="brand">
-            <img src="images/doctor.jpg" alt="Doctor" class="brand-image">
-            <span>StayHealthy</span>
-        </a>
-
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="appointments.html">Appointments</a>
-            <a href="health-blog.html">Health Blog</a>
-            <a href="reviews.html" class="active">Reviews</a>
-            <a href="signup.html" class="signup-link">Sign Up</a>
-            <a href="login.html" class="login-link">Login</a>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <img src="images/doctor-3.webp" alt="" width="42" height="42">
+                <span>StayHealthy</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="health-blog.html">Health Blog</a></li>
+                <li><a href="reviews.html" class="active" aria-current="page">Reviews</a></li>
+                <li><a href="signup.html" class="signup-link">Sign Up</a></li>
+                <li><a href="login.html" class="login-link">Login</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -31,7 +36,7 @@
 
         <section class="page-heading">
             <h1>Doctor Reviews</h1>
-            <p>Share your experience and help us improve our healthcare services.</p>
+            <p>These sample profiles are fictional. Reviews entered below are shown on this page only and are not saved.</p>
         </section>
 
         <section class="table-card">
@@ -131,7 +136,7 @@
 
                 <div class="form-group">
                     <label for="rating">Rating</label>
-                    <select id="rating" required>
+                    <select id="rating" name="rating" aria-describedby="reviewMessage" required>
                         <option value="">Select your rating</option>
                         <option value="5">★★★★★ - Excellent</option>
                         <option value="4">★★★★ - Very Good</option>
@@ -145,6 +150,8 @@
                     <label for="reviewText">Your Review</label>
                     <textarea
                         id="reviewText"
+                        name="reviewText"
+                        aria-describedby="reviewMessage"
                         rows="4"
                         placeholder="Write your review here..."
                         required
@@ -162,7 +169,7 @@
                     </button>
                 </div>
 
-                <p id="reviewMessage" role="status" aria-live="polite"></p>
+                <p id="reviewMessage" role="status" aria-live="polite" aria-atomic="true"></p>
 
             </form>
 

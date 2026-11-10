@@ -7,37 +7,27 @@
     <meta name="description" content="StayHealthy - Your Health, Our Responsibility.">
     <title>StayHealthy | Your Health, Our Responsibility</title>
     <link rel="stylesheet" href="home.css">
-    <script src="home.js" defer></script>
+    <link rel="stylesheet" href="navigation.css">
+    <script src="navigation.js" defer></script>
 </head>
 <body>
 
-    <header class="navbar">
-        <a href="index.html" class="brand">
-            <span>StayHealthy</span>
-            <img
-                src="images/doctor.png"
-                alt="Doctor"
-                class="brand-image"
-            >
-        </a>
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="navLinks"
-        >
-            ☰
-        </button>
-
-        <nav class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="appointments.html" class="appointments-link">Appointments</a>
-            <a href="health-blog.html">Health Blog</a>
-            <a href="reviews.html" class="reviews-link">Reviews</a>
-            <a href="signup.html" class="signup-link">Sign Up</a>
-            <a href="login.html" class="login-link">Login</a>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <img src="images/doctor-3.webp" alt="" width="42" height="42">
+                <span>StayHealthy</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="health-blog.html">Health Blog</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="signup.html" class="signup-link">Sign Up</a></li>
+                <li><a href="login.html" class="login-link">Login</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -56,11 +46,11 @@
                 </h1>
 
                 <p class="hero-description">
-                    Access healthcare services and connect with qualified doctors.
+                    Explore a frontend demo with sample doctor profiles and healthcare information.
                 </p>
 
                 <p class="hero-description second-line">
-                    Your wellbeing matters. Take the first step towards better healthcare today.
+                    The profiles and forms are fictional examples; no appointments or accounts are created.
                 </p>
 
                 <a href="signup.html" class="get-started-btn">

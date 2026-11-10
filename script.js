@@ -20,6 +20,12 @@ if (signupForm) {
         message.textContent = "";
         message.className = "";
 
+        if (role !== "patient" && role !== "doctor") {
+            document.getElementById("role").focus();
+            showMessage("Please select Patient or Doctor.", "error");
+            return;
+        }
+
         // Validate full name
         if (fullName.length < 2) {
             showMessage("Please enter your full name.", "error");
@@ -53,7 +59,7 @@ if (signupForm) {
 
         // Successful frontend validation
         showMessage(
-            `Your ${role || "account"} registration form has been validated successfully.`,
+            `Your ${role} registration form was validated. No account was created or saved.`,
             "success"
         );
     });
