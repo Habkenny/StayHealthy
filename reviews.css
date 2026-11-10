@@ -1,0 +1,304 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #168477;
+    --primary-dark: #10685f;
+    --blue: #2563eb;
+    --text: #243b3a;
+    --muted: #71817f;
+    --border: #dce8e5;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f0f7f6;
+    color: var(--text);
+}
+
+/* Navigation */
+.navbar {
+    min-height: 85px;
+    padding: 12px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary);
+    font-size: 23px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.brand-image {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #455956;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.nav-links .signup-link {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 10px 16px;
+    border-radius: 7px;
+}
+
+.nav-links .login-link {
+    color: white;
+    background: var(--primary);
+    padding: 11px 20px;
+    border-radius: 7px;
+}
+
+/* Main content */
+.reviews-container {
+    max-width: 1250px;
+    width: 92%;
+    margin: 55px auto;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-heading h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.page-heading p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Table card */
+.table-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(30, 85, 76, 0.07);
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+thead {
+    background: #e7f4f1;
+}
+
+th {
+    color: #24554e;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    padding: 18px 15px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 18px 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #edf1f0;
+}
+
+tbody tr:hover {
+    background: #f8fbfa;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Give Review button */
+.review-btn {
+    padding: 10px 16px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.review-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.review-status {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Review form */
+.review-form-card {
+    max-width: 600px;
+    margin: 35px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(30, 85, 76, 0.07);
+}
+
+.review-form-card[hidden] {
+    display: none;
+}
+
+.review-form-card h2 {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+#selectedDoctor {
+    margin-bottom: 25px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(22, 132, 119, 0.1);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.submit-review-btn,
+.cancel-btn {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-review-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.submit-review-btn:hover {
+    background: var(--primary-dark);
+}
+
+.cancel-btn {
+    background: #edf4f2;
+    color: var(--text);
+}
+
+#reviewMessage {
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 520px) {
+    .reviews-container {
+        width: 94%;
+        margin: 35px auto;
+    }
+
+    .page-heading h1 {
+        font-size: 27px;
+    }
+
+    .table-card {
+        padding: 12px;
+    }
+
+    .review-form-card {
+        padding: 22px 17px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+}

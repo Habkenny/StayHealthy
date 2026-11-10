@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Login securely to your StayHealthy account."
+    >
+
+    <title>StayHealthy | Login</title>
+
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-card" aria-labelledby="login-title">
+
+            <h1 id="login-title">Login</h1>
+
+            <p class="signup-text">
+                Are you a new member?
+                <a href="signup.html">Sign up here</a>
+            </p>
+
+            <form id="loginForm" method="post" novalidate>
+
+                <!-- Email Address -->
+                <div class="form-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="password">Password</label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="togglePassword"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+                <!-- Reset Button -->
+                <button type="reset" class="reset-btn">
+                    Reset
+                </button>
+
+                <!-- Forgot Password -->
+                <p class="forgot-password">
+                    <a href="forgot-password.html">
+                        Forgot password?
+                    </a>
+                </p>
+
+                <!-- Status Message -->
+                <p
+                    id="message"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

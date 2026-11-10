@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your feedback about StayHealthy doctors.">
+    <title>StayHealthy | Reviews</title>
+    <link rel="stylesheet" href="reviews.css">
+    <script src="reviews.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="brand">
+            <img src="images/doctor.jpg" alt="Doctor" class="brand-image">
+            <span>StayHealthy</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="health-blog.html">Health Blog</a>
+            <a href="reviews.html" class="active">Reviews</a>
+            <a href="signup.html" class="signup-link">Sign Up</a>
+            <a href="login.html" class="login-link">Login</a>
+        </nav>
+    </header>
+
+    <main class="reviews-container">
+
+        <section class="page-heading">
+            <h1>Doctor Reviews</h1>
+            <p>Share your experience and help us improve our healthcare services.</p>
+        </section>
+
+        <section class="table-card">
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Serial Number</th>
+                            <th>Doctor's Name</th>
+                            <th>Doctor's Speciality</th>
+                            <th>Provide Review</th>
+                            <th>Review Given</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reviewsTable">
+
+                        <tr>
+                            <td>1</td>
+                            <td>Dr. Sarah Johnson</td>
+                            <td>Cardiology</td>
+                            <td>
+                                <button class="review-btn"
+                                    data-doctor="Dr. Sarah Johnson">
+                                    Give Review
+                                </button>
+                            </td>
+                            <td class="review-status">No review yet</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Dr. Michael Brown</td>
+                            <td>Dermatology</td>
+                            <td>
+                                <button class="review-btn"
+                                    data-doctor="Dr. Michael Brown">
+                                    Give Review
+                                </button>
+                            </td>
+                            <td class="review-status">No review yet</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Dr. Emily Wilson</td>
+                            <td>Paediatrics</td>
+                            <td>
+                                <button class="review-btn"
+                                    data-doctor="Dr. Emily Wilson">
+                                    Give Review
+                                </button>
+                            </td>
+                            <td class="review-status">No review yet</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Dr. David Miller</td>
+                            <td>Neurology</td>
+                            <td>
+                                <button class="review-btn"
+                                    data-doctor="Dr. David Miller">
+                                    Give Review
+                                </button>
+                            </td>
+                            <td class="review-status">No review yet</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Dr. Olivia Taylor</td>
+                            <td>General Practice</td>
+                            <td>
+                                <button class="review-btn"
+                                    data-doctor="Dr. Olivia Taylor">
+                                    Give Review
+                                </button>
+                            </td>
+                            <td class="review-status">No review yet</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Review Form -->
+        <section class="review-form-card" id="reviewFormCard" hidden>
+
+            <h2>Give Your Review</h2>
+            <p id="selectedDoctor"></p>
+
+            <form id="reviewForm">
+
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <select id="rating" required>
+                        <option value="">Select your rating</option>
+                        <option value="5">★★★★★ - Excellent</option>
+                        <option value="4">★★★★ - Very Good</option>
+                        <option value="3">★★★ - Good</option>
+                        <option value="2">★★ - Fair</option>
+                        <option value="1">★ - Poor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewText">Your Review</label>
+                    <textarea
+                        id="reviewText"
+                        rows="4"
+                        placeholder="Write your review here..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="submit-review-btn">
+                        Submit Review
+                    </button>
+
+                    <button type="button" id="cancelReview"
+                        class="cancel-btn">
+                        Cancel
+                    </button>
+                </div>
+
+                <p id="reviewMessage" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

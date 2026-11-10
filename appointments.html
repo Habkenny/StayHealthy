@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find a doctor and explore available healthcare professionals at StayHealthy.">
+    <title>StayHealthy | Appointments</title>
+    <link rel="stylesheet" href="appointments.css">
+    <script src="appointments.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <img src="images/doctor.jpg" alt="StayHealthy logo">
+                <span>StayHealthy</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="appointments.html" class="active">Appointments</a></li>
+                <li><a href="health-blog.html">Health Blog</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="doctor-search-section">
+            <div class="container">
+
+                <h1>Find a doctor at ease</h1>
+
+                <div class="search-visual">
+                    <img src="images/doctor.jpg" alt="Healthcare professional">
+                </div>
+
+                <form class="search-form" id="doctorSearchForm">
+                    <label for="speciality">Search doctor by speciality</label>
+
+                    <div class="search-input-wrapper">
+                        <input
+                            type="search"
+                            id="speciality"
+                            placeholder="e.g. Cardiology, Dermatology, Paediatrics"
+                            autocomplete="off"
+                        >
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+
+                <p class="doctor-count" id="doctorCount">
+                    8 doctors available
+                </p>
+
+                <p class="search-description">
+                    Book appointments with minimum wait-time &amp; verified doctor details.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="doctors-section container">
+            <div class="section-heading">
+                <h2>Available Doctors</h2>
+                <p>Choose a doctor to get started with your healthcare journey.</p>
+            </div>
+
+            <div class="doctor-grid" id="doctorGrid">
+
+                <article class="doctor-card" data-speciality="cardiology">
+                    <img src="images/doctor-1.jpg" alt="Dr. Sarah Johnson">
+                    <div class="doctor-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>Cardiologist</p>
+                        <button class="book-button" type="button" data-doctor="Dr. Sarah Johnson">
+                            Book appointment
+                            <span>No booking fee</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doctor-card" data-speciality="dermatology">
+                    <img src="images/doctor-2.jpg" alt="Dr. Michael Brown">
+                    <div class="doctor-info">
+                        <h3>Dr. Michael Brown</h3>
+                        <p>Dermatologist</p>
+                        <button class="book-button" type="button" data-doctor="Dr. Michael Brown">
+                            Book appointment
+                            <span>No booking fee</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doctor-card" data-speciality="paediatrics pediatrics">
+                    <img src="images/doctor-3.jpg" alt="Dr. Emily Wilson">
+                    <div class="doctor-info">
+                        <h3>Dr. Emily Wilson</h3>
+                        <p>Paediatrician</p>
+                        <button class="book-button" type="button" data-doctor="Dr. Emily Wilson">
+                            Book appointment
+                            <span>No booking fee</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doctor-card" data-speciality="neurology">
+                    <img src="images/doctor-4.jpg" alt="Dr. David Miller">
+                    <div class="doctor-info">
+                        <h3>Dr. David Miller</h3>
+                        <p>Neurologist</p>
+                        <button class="book-button" type="button" data-doctor="Dr. David Miller">
+                            Book appointment
+                            <span>No booking fee</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doctor-card" data-speciality="general practice general practitioner">
+                    <img src="images/doctor-5.jpg" alt="Dr. Olivia Taylor">
+                    <div class="doctor-info">
+                        <h3>Dr. Olivia Taylor</h3>
+                        <p>General Practitioner</p>
+                        <button class="book-button" type="button" data-doctor="Dr. Olivia Taylor">
+                            Book appointment
+                            <span>No booking fee</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doctor-card" data-speciality="orthopaedics orthopedics">
+                    <img src="images/doctor-6.jpg" alt="Dr. James Anderson">
+                    <div class="doctor-info">
+                        <h3>Dr. James Anderson</h3>
+                        <p>Orthopaedic Surgeon</p>
+                        <button class="book-button" type="button" data-doctor="Dr. James Anderson">
+                            Book appointment
+                            <span>No booking fee</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doctor-card" data-speciality="dentistry dentist">
+                    <img src="images/doctor-7.jpg" alt="Dr. Sophia Martinez">
+                    <div class="doctor-info">
+                        <h3>Dr. Sophia Martinez</h3>
+                        <p>Dentist</p>
+                        <button class="book-button" type="button" data-doctor="Dr. Sophia Martinez">
+                            Book appointment
+                            <span>No booking fee</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doctor-card" data-speciality="ophthalmology eye specialist">
+                    <img src="images/doctor-8.jpg" alt="Dr. Daniel White">
+                    <div class="doctor-info">
+                        <h3>Dr. Daniel White</h3>
+                        <p>Ophthalmologist</p>
+                        <button class="book-button" type="button" data-doctor="Dr. Daniel White">
+                            Book appointment
+                            <span>No booking fee</span>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="no-results" id="noResults" hidden>
+                No doctors found. Try searching for another speciality.
+            </p>
+
+            <p class="booking-message" id="bookingMessage" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 StayHealthy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

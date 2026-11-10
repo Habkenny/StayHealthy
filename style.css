@@ -1,0 +1,213 @@
+
+/* ==========================
+   StayHealthy - Sign Up Page
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #168477;
+    --primary-dark: #10685f;
+    --background: #f0f7f6;
+    --text: #243b3a;
+    --muted: #7b8c8a;
+    --border: #dce8e5;
+    --white: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e9f5f2, #f7faf9);
+    color: var(--text);
+}
+
+/* Main layout */
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 18px;
+}
+
+/* Form card */
+.signup-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 42px 40px;
+    background: var(--white);
+    border: 1px solid rgba(220, 232, 229, 0.8);
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(30, 85, 76, 0.09);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.login-text {
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 32px;
+}
+
+.login-text a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.login-text a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 21px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #354b49;
+    margin-bottom: 9px;
+}
+
+/* Inputs and select */
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 49px;
+    padding: 0 15px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #fbfdfd;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.form-group input::placeholder {
+    color: #a5b2b0;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #a8cbc4;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(22, 132, 119, 0.10);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Buttons */
+.submit-btn,
+.reset-btn {
+    width: 100%;
+    height: 49px;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 5px 12px rgba(22, 132, 119, 0.17);
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(22, 132, 119, 0.2);
+}
+
+.reset-btn {
+    margin-top: 12px;
+    background: #edf4f2;
+    color: #536966;
+}
+
+.reset-btn:hover {
+    background: #dfece8;
+    color: var(--text);
+}
+
+/* Keyboard accessibility */
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #8bc9bd;
+    outline-offset: 3px;
+}
+
+/* Feedback message */
+#message {
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+#message.success,
+#message.error {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#message.success {
+    color: #126b4e;
+    background: #e9f7ef;
+}
+
+#message.error {
+    color: #b42318;
+    background: #fff0ee;
+}
+
+/* Responsive design */
+@media (max-width: 520px) {
+    .signup-container {
+        padding: 20px 14px;
+    }
+
+    .signup-card {
+        padding: 32px 23px;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
